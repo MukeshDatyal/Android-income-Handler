@@ -269,9 +269,40 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.ux_add_income) {
+            AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
+            adb.setView(R.layout.activity_add_income);
+            adb.setTitle("INCOME");
+            //   adb.setIcon(android.R.drawable.ic_dialog_alert);
+            adb.setPositiveButton("ADD INCOME", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+
+                    income+=income;
+                    Toast.makeText(MainActivity.this, "gaggagagagagaagag", Toast.LENGTH_SHORT).show();
+                } });
+            adb.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+
+                    finish();
+                } });
+            adb.show();
+
+        } else if (id == R.id.ux_add_expense) {
+            AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
+            adb.setView(R.layout.activity_add__expense);
+            adb.setTitle("Expense");
+            // adb.setIcon(android.R.drawable.ic_dialog_alert);
+            adb.setPositiveButton("ADD Expense", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+
+                    income+=income;
+                    Toast.makeText(MainActivity.this, "gaggagagagagaagag", Toast.LENGTH_SHORT).show();
+                } });
+            adb.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                } });
+            adb.show();
 
         } else if (id == R.id.nav_slideshow) {
 
