@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.pc2.Income_Expensehandler.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                style="@style/ImageTitle"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="@string/lightning" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/lightning"
+                tools:ignore="ContentDescription,UnknownId"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/color_baloons"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                style="@style/ImageTitle"
+                android:text="@string/color_baloons" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/natural_wall"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                style="@style/ImageTitle"
+                android:text="@string/natural_wall" />
+
+        </RelativeLayout>
+
+    </ViewFlipper>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_flipper"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Balance"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/ux_txt_balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="0.00 Rs"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        tools:ignore="NotSibling,UselessLeaf">
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ux_txt_income"
+        android:layout_width="191dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="0.00 Rs"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:ignore="HardcodedText,ObsoleteLayoutParam,RtlHardcoded"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="44dp" />
+
+    <TextView
+        android:id="@+id/ux_txt_expense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="0.00 Rs"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:ignore="HardcodedText"
+        android:layout_alignBaseline="@+id/ux_txt_income"
+        android:layout_alignBottom="@+id/ux_txt_income"
+        android:layout_toRightOf="@+id/ux_txt_income"
+        android:layout_toEndOf="@+id/ux_txt_income" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@+id/ux_txt_balance"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/ux_btn_add_income"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/ux_txt_balance"
+            android:layout_toStartOf="@+id/ux_txt_balance"
+            android:text="Add Income"
+            tools:ignore="ButtonStyle,HardcodedText,ObsoleteLayoutParam" />
+
+        <Button
+            android:id="@+id/ux_btn_add_expense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/ux_txt_balance"
+            android:layout_toRightOf="@+id/ux_txt_balance"
+            android:text="Add Expense"
+            tools:ignore="ButtonStyle,HardcodedText,ObsoleteLayoutParam" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Total Expense"
+        tools:ignore="HardcodedText,InefficientWeight,ObsoleteLayoutParam,RtlHardcoded"
+        android:layout_weight="1"
+        android:layout_above="@+id/ux_txt_income"
+        android:layout_toRightOf="@+id/ux_txt_income"
+        android:layout_marginBottom="21dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        tools:ignore="UnknownId,UselessLeaf"
+        android:layout_below="@+id/linearLayout8"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Total Income"
+        tools:ignore="HardcodedText,ObsoleteLayoutParam,RtlHardcoded,Suspicious0dp"
+        android:layout_weight="0.12"
+        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_toLeftOf="@+id/textView6"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

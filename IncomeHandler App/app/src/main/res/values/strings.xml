@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Income-Expense</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="lightning">Natural Lightning</string>
+    <string name="color_baloons">Color Baloons</string>
+    <string name="natural_wall">Natural Wall</string>
+    <string name="amount">Amount</string>
+    <string name="time">Time</string>
+    <string name="date">Date</string>
+    <string name="categories">Categories</string>
+    <string name="mode">Mode</string>
+    <string name="add_income">Add Income</string>
+    <string name="description">Description</string>
+    <string name="add_expense">Add expense</string>
+    <string name="bank">Bank</string>
+    <string name="cash">Cash</string>
+    <string name="e_wallet">E-wallet</string>
+    <string name="_0_00">0.00</string>
+
+</resources>
